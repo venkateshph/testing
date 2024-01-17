@@ -1,0 +1,13 @@
+.Fotter{
+    background-color: #98bdff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white    ;
+}
