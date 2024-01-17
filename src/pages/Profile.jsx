@@ -14,7 +14,7 @@ const Profile = () => {
 
   async function fetching() {
     const { data, error } = await supabase
-      .from("Teacher  ")
+      .from("Students")
       .select()
       .eq("Name", window.localStorage.getItem("username"));
 
@@ -39,20 +39,21 @@ const Profile = () => {
           <div className="col">
             <div
               class="float-center shadow-lg card text-center "
-              style={{ width: "18rem" }}
+              style={{ width: "18rem" , backgroundColor: "whitesmoke", color: "black" , padding: "20px", }}
+              
             >
               <div class="card-header">About you</div>
-              <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Name: {Name}</li>
-                  <li class="list-group-item">Bloodgroup: {Bloodgroup}</li>
-                  <li class="list-group-item">Address: {Address}</li>
-                  <li class="list-group-item">Phonenumber: {Phonenumber}</li>
-                  <li class="list-group-item">Fathername: {Fathername}</li>
-                  <li class="list-group-item">Mothername: {Mothername}</li>
-                  <li class="list-group-item">Department: {Department}</li>
-                  <li class="list-group-item">Email: {Email}</li>
-                  <li class="list-group-item">Rollno: {Rollno}</li>
+              <div class="card-body" style={{backgroundColor:"whitesmoke  "}}>
+                <ul class="list-group list-group-flush" >
+                  <li  style={{listStyle: "none" , backgroundColor:"whitesmoke"}}>Name: {Name}</li>
+                  <li  style={{ listStyle: "none" , backgroundColor:"whitesmoke"}}>Bloodgroup: {Bloodgroup}</li>
+                  <li  style={{ listStyle: "none" , backgroundColor:"whitesmoke"}}>Address: {Address}</li>
+                  <li  style={{ listStyle: "none" , backgroundColor:"whitesmoke"}}>Phonenumber: {Phonenumber}</li>
+                  <li  style={{ listStyle: "none" , backgroundColor:"whitesmoke"}}>Fathername: {Fathername}</li>
+                  <li  style={{ listStyle: "none" , backgroundColor:"whitesmoke"}}>Mothername: {Mothername}</li>
+                  <li  style={{ listStyle: "none", backgroundColor:"whitesmoke"}}>Department: {Department}</li>
+                  <li  style={{ listStyle: "none", backgroundColor:"whitesmoke"}}>Email: {Email}</li>
+                  <li  style={{ listStyle: "none", backgroundColor:"whitesmoke"}}>Rollno: {Rollno}</li>
                 </ul>
               </div>
             </div>  

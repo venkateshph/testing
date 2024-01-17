@@ -2,6 +2,7 @@ import { Button } from "antd";
 import React, { useState, useEffect } from "react";
 import supabase from "C:/Users/keert/Desktop/Test/Project/src/security/pass.js";
 import { Link } from "react-router-dom";
+import "../App.css"
 const Login = () => {
   const [loginn, setLogin] = useState(false);
   const [username, setusername] = useState(null);
@@ -18,7 +19,7 @@ const Login = () => {
 
   async function login() {
     const { data, error } = await supabase
-      .from("Teacher")
+      .from("Students")
       .select()
       .eq("Name", username);
     console.log(data);
@@ -38,7 +39,7 @@ const Login = () => {
         <div class="position-absolute top-50 start-50 translate-middle">
           <div className="card" style={{ width: "20rem" }}>
             <div className="card-body">
-              <h5 class="float-right">Teacher Login</h5>
+              <h5 class="float-right">Student Login</h5>
               <label for="username">Username:</label>
               <input
                 id="username"

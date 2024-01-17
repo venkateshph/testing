@@ -1,11 +1,8 @@
 import { React, useEffect, useState } from "react";
 
 import supabase from "C:/Users/keert/Desktop/Test/Project/src/security/pass.js";
-import { Button, Skeleton } from "antd";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import Attences from "./Attences";
-import Exam from "./Exam";
+import {  Skeleton } from "antd";
+import Mark from "./Mark";
 import Profile from "./Profile";
 const Homepage = (props) => {
   const [created, setCreated] = useState([]);
@@ -35,7 +32,7 @@ const Homepage = (props) => {
   });
   return (
     <>
-      <nav class="navbar text-dark shadow bg-primary-subtle ">
+      <nav class="navbar text-dark shadow  ">
         <div class="container-fluid">
           <a class="navbar-brand text-dark" href="#">
             <img
@@ -74,7 +71,7 @@ const Homepage = (props) => {
             )}
           </div>
           <div className="col-6">
-            <Attences />
+            <Mark/>
           </div>
           <div className="col">
             <Profile />
